@@ -1975,24 +1975,36 @@ body {
 }
 
 /* ==========================================================================
-   MODIFICATION PASS — REFINED COMPONENTS
+   FINAL VISUAL CORRECTION PASS — DESIGN ENHANCEMENTS
    ========================================================================== */
 
-/* ── 01 Cinematic Opening Hero Banner ── */
-.hero-cinematic-banner {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  max-height: 78vh;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 122, 0, 0.25);
-  display: flex;
-  align-items: flex-end;
-  background: var(--dark-bg);
+/* ── Navbar Saden Brand Logo ── */
+.nav-saden-logo {
+  height: 28px;
+  max-width: 120px;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2px 8px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-.hero-image-wrap {
+/* ── 01 Opening Hero Stage (Strong 16:9 Cinematic Impact) ── */
+.opening-hero-stage {
+  position: relative;
+  width: 100%;
+  min-height: 85vh;
+  aspect-ratio: 16 / 9;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 122, 0, 0.3);
+  display: flex;
+  align-items: flex-end;
+  background: #0d1127;
+  margin: 0 auto;
+}
+
+.opening-hero-visual-wrap {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -2000,103 +2012,161 @@ body {
   z-index: 1;
 }
 
-.hero-cinematic-img {
+.opening-hero-main-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center 18%;
   display: block;
   transform: scale(1.02);
-  transition: transform 0.6s ease;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.hero-cinematic-banner:hover .hero-cinematic-img {
+.opening-hero-stage:hover .opening-hero-main-img {
   transform: scale(1.05);
 }
 
-.hero-gradient-overlay {
+.opening-cinematic-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(18, 24, 56, 0.25) 0%,
-    rgba(18, 24, 56, 0.4) 40%,
-    rgba(18, 24, 56, 0.88) 85%,
+    rgba(18, 24, 56, 0.2) 0%,
+    rgba(18, 24, 56, 0.35) 35%,
+    rgba(18, 24, 56, 0.85) 75%,
     rgba(18, 24, 56, 0.98) 100%
   );
   z-index: 2;
 }
 
-.hero-content-overlay {
+.opening-hero-content {
   position: relative;
   z-index: 3;
-  padding: 3rem;
+  padding: 3.5rem;
   width: 100%;
 }
-@media (max-width: 768px) {
-  .hero-cinematic-banner { aspect-ratio: 4 / 3; max-height: none; }
-  .hero-content-overlay { padding: 1.5rem; }
-}
 
-/* ── 02 Show Identity & Local Outro Video Stack ── */
-.show-identity-column {
+.opening-identity-row {
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  align-items: flex-end;
+  gap: 2.5rem;
+  flex-wrap: wrap;
 }
 
-.identity-badge-label {
-  font-family: var(--font-en-display);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  color: var(--saden-blue-dark);
-  background: rgba(47, 58, 141, 0.08);
-  padding: 0.35rem 0.85rem;
-  border-radius: 6px;
-  display: inline-flex;
+.opening-logo-box {
+  background: rgba(255, 255, 255, 0.98);
+  border: 2px solid var(--saden-orange);
+  border-radius: 18px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  display: flex;
   align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.75rem;
+  justify-content: center;
 }
 
-.show-logo-wrapper {
+.opening-k3ab-logo {
+  max-height: 170px;
+  max-width: 220px;
+  width: auto;
+  object-fit: contain;
+}
+
+.opening-titles-block {
+  flex: 1;
+  min-width: 280px;
+}
+
+.cover-saden-logo {
+  height: 38px;
+  max-width: 160px;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 3px 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 900px) {
+  .opening-hero-stage { min-height: auto; aspect-ratio: 4 / 3; }
+  .opening-hero-content { padding: 1.75rem; }
+  .opening-identity-row { gap: 1.5rem; }
+  .opening-k3ab-logo { max-height: 120px; }
+}
+
+/* ── 02 Show Identity & Early Outro Showcase ── */
+.show-identity-card-box {
   background: linear-gradient(145deg, #ffffff, #fff9f2);
   border: 1px solid rgba(255, 122, 0, 0.25);
-  border-radius: 14px;
-  padding: 1.25rem;
+  border-radius: 16px;
+  padding: 1.5rem;
   text-align: center;
-  box-shadow: 0 4px 20px rgba(47, 58, 141, 0.06);
+  box-shadow: 0 8px 24px rgba(47, 58, 141, 0.08);
 }
 
-.show-official-logo {
-  max-height: 220px;
+.show-card-logo {
+  max-height: 240px;
   width: 100%;
   object-fit: contain;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
-.show-official-logo:hover {
-  transform: scale(1.02);
+.show-card-logo:hover {
+  transform: scale(1.03);
 }
 
-.show-outro-video-box {
-  background: var(--saden-blue-dark);
-  border: 1px solid rgba(255, 122, 0, 0.35);
-  border-radius: 14px;
-  padding: 1.25rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+.early-outro-showcase-wrapper {
+  background: linear-gradient(180deg, rgba(31, 40, 95, 0.04) 0%, rgba(255, 122, 0, 0.04) 100%);
+  border: 1px solid rgba(47, 58, 141, 0.12);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
 }
 
-.local-video-container {
-  border-radius: 10px;
+.outro-cinematic-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.outro-logo-top {
+  background: #ffffff;
+  border: 2px solid rgba(255, 122, 0, 0.4);
+  border-radius: 16px;
+  padding: 1rem 2rem;
+  box-shadow: 0 8px 24px rgba(255, 122, 0, 0.15);
+}
+
+.outro-stage-logo {
+  max-height: 140px;
+  max-width: 240px;
+  object-fit: contain;
+}
+
+.outro-arrow-indicator {
+  font-size: 1.4rem;
+  color: var(--saden-orange);
+  animation: bounceDown 2s infinite ease-in-out;
+}
+@keyframes bounceDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+.outro-large-video-player {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
   overflow: hidden;
   background: #000;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 122, 0, 0.35);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35), 0 0 25px rgba(255, 122, 0, 0.2);
 }
 
-.show-local-video {
+.outro-main-video-el {
   width: 100%;
-  max-height: 260px;
+  height: 100%;
+  object-fit: cover;
   display: block;
   outline: none;
 }
@@ -2366,16 +2436,139 @@ body {
   line-height: 1.35;
 }
 
+/* ── 09 Featured Viral Social Proof Card ── */
+.proof-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.proof-badge-highlight {
+  background: var(--saden-orange);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  padding: 0.3rem 0.85rem;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-en-display);
+}
+
+.featured-viral-proof-card {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2rem;
+  background: linear-gradient(145deg, #ffffff, #fffaf3);
+  border: 2px solid rgba(255, 122, 0, 0.35);
+  border-radius: 18px;
+  padding: 1.75rem;
+  box-shadow: 0 12px 36px rgba(255, 122, 0, 0.12);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  align-items: center;
+}
+.featured-viral-proof-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(255, 122, 0, 0.2);
+}
+
+.fvp-image-col {
+  height: 380px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.fvp-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.4s ease;
+}
+.featured-viral-proof-card:hover .fvp-img {
+  transform: scale(1.04);
+}
+
+.fvp-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(47, 58, 141, 0.08);
+  color: var(--saden-blue-dark);
+  font-family: var(--font-en-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+}
+
+.fvp-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--saden-blue-dark);
+  margin-bottom: 1.25rem;
+  line-height: 1.4;
+}
+
+.fvp-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.fvp-stat-box {
+  background: #ffffff;
+  border: 1px solid rgba(47, 58, 141, 0.12);
+  border-radius: 10px;
+  padding: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.fvp-stat-num {
+  font-family: var(--font-en-display);
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--saden-orange);
+  line-height: 1;
+}
+
+.fvp-stat-lbl {
+  font-size: 0.78rem;
+  color: var(--text-dark-secondary);
+  font-weight: 600;
+}
+
+.fvp-desc {
+  font-size: 0.95rem;
+  color: var(--text-dark-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 800px) {
+  .featured-viral-proof-card { grid-template-columns: 1fr; }
+  .fvp-image-col { height: 280px; }
+}
+
 /* ── Social Proof Grid ── */
 .social-proof-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 0.75rem;
 }
 @media (max-width: 900px) {
-  .social-proof-grid { grid-template-columns: repeat(3, 1fr); }
-}
-@media (max-width: 600px) {
   .social-proof-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -2385,7 +2578,7 @@ body {
   overflow: hidden;
   border: 1px solid rgba(47, 58, 141, 0.15);
   background: #000;
-  aspect-ratio: 9 / 16;
+  aspect-ratio: 9 / 14;
   cursor: pointer;
   box-shadow: 0 4px 16px rgba(47, 58, 141, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;

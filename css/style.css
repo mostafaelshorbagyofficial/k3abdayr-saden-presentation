@@ -1975,10 +1975,133 @@ body {
 }
 
 /* ==========================================================================
-   MODIFICATION PASS — NEW COMPONENTS
+   MODIFICATION PASS — REFINED COMPONENTS
    ========================================================================== */
 
-/* ── Season Block (replaces season-card two-col grid) ── */
+/* ── 01 Cinematic Opening Hero Banner ── */
+.hero-cinematic-banner {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 78vh;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 122, 0, 0.25);
+  display: flex;
+  align-items: flex-end;
+  background: var(--dark-bg);
+}
+
+.hero-image-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-cinematic-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+  transform: scale(1.02);
+  transition: transform 0.6s ease;
+}
+.hero-cinematic-banner:hover .hero-cinematic-img {
+  transform: scale(1.05);
+}
+
+.hero-gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(18, 24, 56, 0.25) 0%,
+    rgba(18, 24, 56, 0.4) 40%,
+    rgba(18, 24, 56, 0.88) 85%,
+    rgba(18, 24, 56, 0.98) 100%
+  );
+  z-index: 2;
+}
+
+.hero-content-overlay {
+  position: relative;
+  z-index: 3;
+  padding: 3rem;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .hero-cinematic-banner { aspect-ratio: 4 / 3; max-height: none; }
+  .hero-content-overlay { padding: 1.5rem; }
+}
+
+/* ── 02 Show Identity & Local Outro Video Stack ── */
+.show-identity-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.identity-badge-label {
+  font-family: var(--font-en-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--saden-blue-dark);
+  background: rgba(47, 58, 141, 0.08);
+  padding: 0.35rem 0.85rem;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.show-logo-wrapper {
+  background: linear-gradient(145deg, #ffffff, #fff9f2);
+  border: 1px solid rgba(255, 122, 0, 0.25);
+  border-radius: 14px;
+  padding: 1.25rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(47, 58, 141, 0.06);
+}
+
+.show-official-logo {
+  max-height: 220px;
+  width: 100%;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.show-official-logo:hover {
+  transform: scale(1.02);
+}
+
+.show-outro-video-box {
+  background: var(--saden-blue-dark);
+  border: 1px solid rgba(255, 122, 0, 0.35);
+  border-radius: 14px;
+  padding: 1.25rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.local-video-container {
+  border-radius: 10px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.show-local-video {
+  width: 100%;
+  max-height: 260px;
+  display: block;
+  outline: none;
+}
+
+/* ── Season Block & Photo Grid ── */
 .season-block {
   padding: 2rem 0;
   border-bottom: 1px solid rgba(47, 58, 141, 0.1);
@@ -1992,7 +2115,6 @@ body {
   margin-bottom: 0.75rem;
 }
 
-/* ── Photo Grid ── */
 .media-photo-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -2244,58 +2366,68 @@ body {
   line-height: 1.35;
 }
 
-/* ── Outro Video Block ── */
-.outro-video-block {
-  margin: 2rem auto;
-  max-width: 480px;
-  width: 100%;
+/* ── Social Proof Grid ── */
+.social-proof-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.75rem;
 }
-.outro-video-label {
-  font-family: var(--font-en-display);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  color: rgba(255,255,255,0.5);
-  margin-bottom: 0.75rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
+@media (max-width: 900px) {
+  .social-proof-grid { grid-template-columns: repeat(3, 1fr); }
 }
-.outro-video-frame {
+@media (max-width: 600px) {
+  .social-proof-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.proof-card {
   position: relative;
-  border-radius: 14px;
+  border-radius: 12px;
   overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.12);
-  background: rgba(255,255,255,0.04);
-  aspect-ratio: 16 / 9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border: 1px solid rgba(47, 58, 141, 0.15);
+  background: #000;
+  aspect-ratio: 9 / 16;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(47, 58, 141, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
-.outro-bg-logo {
-  position: absolute;
-  inset: 0;
+.proof-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(255, 122, 0, 0.2);
+  border-color: var(--saden-orange);
+}
+.proof-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.12;
-  filter: blur(8px);
+  object-position: top center;
+  transition: transform 0.4s ease;
 }
-.outro-play-area {
-  position: relative;
-  z-index: 1;
+.proof-card:hover img {
+  transform: scale(1.05);
+}
+
+.proof-overlay {
+  position: absolute;
+  bottom: 0;
+  inset-inline: 0;
+  padding: 0.75rem 0.5rem;
+  background: linear-gradient(to top, rgba(18,24,56,0.92) 0%, rgba(18,24,56,0.5) 70%, transparent 100%);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  color: rgba(255,255,255,0.7);
-  font-family: var(--font-en-display);
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  gap: 0.2rem;
+  z-index: 2;
 }
-.outro-play-icon {
-  font-size: 3.5rem;
-  color: rgba(255,122,0,0.6);
+
+.proof-tag {
+  font-family: var(--font-en-display);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--saden-orange);
+}
+
+.proof-stat {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.2;
 }

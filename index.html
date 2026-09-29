@@ -150,25 +150,32 @@
   <main class="presentation-wrapper">
 
     <!-- ==========================================================================
-         01 — COVER
+         01 — COVER (CINEMATIC OPENING HERO)
          ========================================================================== -->
     <section class="slide-section cover-section" id="slide-01">
       <div class="cover-bg-glow"></div>
       <div class="slide-container">
+        
+        <!-- Premium 16:9 Cinematic Hero Banner -->
+        <div class="hero-cinematic-banner">
+          <div class="hero-image-wrap">
+            <img src="assets/mazen/mazen_4.jpeg" 
+                 alt="K3AB DAYR — Mazen, Moaz & Elhagan" 
+                 class="hero-cinematic-img"
+                 data-gallery-src="assets/mazen/mazen_4.jpeg" 
+                 data-gallery-title="كعب داير — الموسم الثالث">
+            <div class="hero-gradient-overlay"></div>
+          </div>
 
-        <!-- K3AB DAYR Official Logo — appears FIRST -->
-        <div style="text-align: center; margin-bottom: 2.5rem;">
-          <img src="assets/k3abdayr/logo_1.jpeg"
-               alt="كعب داير — الشعار الرسمي"
-               style="max-height: 260px; max-width: 100%; object-fit: contain; filter: drop-shadow(0 20px 60px rgba(255,122,0,0.35)); display: inline-block;">
-        </div>
-
-        <div class="cover-grid">
-          <div class="cover-text-col">
+          <div class="hero-content-overlay">
             <div class="cover-badge-row">
               <span class="cover-badge">SEASON 3</span>
               <span class="cover-sub-badge">UMRAH SPECIAL</span>
             </div>
+
+            <h1 class="cover-main-title">
+              كعب داير
+            </h1>
 
             <p class="cover-tagline-ar">
               رحلة مختلفة… ومفاجأة مختلفة
@@ -180,16 +187,8 @@
               <span class="cover-partner-name" style="color: var(--saden-orange);">SIDN</span>
             </div>
           </div>
-
-          <div class="cover-hero-visual">
-            <div class="cover-image-frame">
-              <img src="assets/mazen/mazen_4.jpeg" alt="K3AB DAYR Trio - Mazen, Moaz, Elhagan" data-gallery-src="assets/mazen/mazen_4.jpeg" data-gallery-title="كعب داير — الموسم الثالث">
-              <div class="cover-visual-overlay">
-                <span class="cover-visual-caption">A New Journey. A Different Surprise.</span>
-              </div>
-            </div>
-          </div>
         </div>
+
       </div>
     </section>
 
@@ -235,8 +234,34 @@
             </div>
           </div>
 
-          <div class="show-visual-stack">
-            <img src="assets/k3abdayr/logo_1.jpeg" alt="كعب داير — الشعار الرسمي" class="show-main-img" style="object-fit: contain; background: linear-gradient(135deg, #e8f0fe 0%, #f0e8f8 100%); padding: 1rem;" data-gallery-src="assets/k3abdayr/logo_1.jpeg" data-gallery-title="كعب داير — الشعار الرسمي للبرنامج">
+          <!-- K3AB DAYR Identity Stack: Logo ABOVE, Outro Video DIRECTLY BELOW -->
+          <div class="show-identity-column">
+            <!-- 1. K3AB DAYR Official Logo (ABOVE) -->
+            <div class="show-logo-wrapper">
+              <div class="identity-badge-label">
+                <i class="fa-solid fa-certificate"></i>
+                <span>الهوية والشعار الرسمي للبرنامج</span>
+              </div>
+              <img src="assets/k3abdayr/logo_1.jpeg" 
+                   alt="كعب داير — الشعار الرسمي" 
+                   class="show-official-logo" 
+                   data-gallery-src="assets/k3abdayr/logo_1.jpeg" 
+                   data-gallery-title="كعب داير — الشعار الرسمي للبرنامج">
+            </div>
+
+            <!-- 2. OUTRO VIDEO PLAYER (DIRECTLY BELOW) -->
+            <div class="show-outro-video-box">
+              <div class="identity-badge-label" style="background: var(--saden-blue); color: #fff;">
+                <i class="fa-solid fa-film"></i>
+                <span>فيديو الأوترو الرسمي — K3AB DAYR Outro</span>
+              </div>
+              <div class="local-video-container">
+                <video controls playsinline preload="metadata" poster="assets/turkey/turkey_1.jpeg" class="show-local-video">
+                  <source src="assets/video/outro.mp4" type="video/mp4">
+                  متصفحك لا يدعم تشغيل الفيديو المباشر.
+                </video>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -453,8 +478,8 @@
 
             <div class="creator-stat-badge">
               <div>
-                <span class="stat-highlight">+10M</span>
-                <div class="stat-label">متابع عبر المنصات (TikTok: 3.7M | FB: 4.6M | IG: 1.4M)</div>
+                <span class="stat-highlight">+9.7M</span>
+                <div class="stat-label">متابع عبر المنصات (TikTok: 3.7M | Facebook: 4.6M | Instagram: 1.4M)</div>
               </div>
             </div>
 
@@ -499,7 +524,7 @@
       <div class="slide-container">
         <div class="elhagan-grid">
           <div class="elhagan-portrait-frame">
-            <img src="assets/elhagan/elhagan_1.jpeg" alt="محمد الهجان" data-gallery-src="assets/elhagan/elhagan_1.jpeg" data-gallery-title="محمد الهجان">
+            <img src="assets/elhagan/elhagan_1.jpeg" alt="محمد الهجان" data-gallery-src="assets/elhagan/elhagan_1.jpeg" data-gallery-title="محمد الهجان — خبير المحتوى والإنتاج">
           </div>
 
           <div class="elhagan-content-col">
@@ -517,15 +542,15 @@
 
             <div class="creator-stat-badge">
               <div>
-                <span class="stat-highlight" style="color: var(--saden-blue);">+3M</span>
-                <div class="stat-label">متابع عبر منصات التواصل الاجتماعي</div>
+                <span class="stat-highlight" style="color: var(--saden-blue);">+2M</span>
+                <div class="stat-label">متابع عبر منصات التواصل الاجتماعي (Instagram + Facebook)</div>
               </div>
             </div>
 
             <div class="pill-tags-group" style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem;">
               <span class="pill-tag">Experience</span>
-              <span class="pill-tag">Youth</span>
-              <span class="pill-tag">Content</span>
+              <span class="pill-tag">Youth & University</span>
+              <span class="pill-tag">Content Direction</span>
             </div>
 
             <div class="social-links-row">
@@ -712,6 +737,59 @@
             <p class="disclaimer-text">
               * ملاحظة توضيحية: الرقم يمثل إجمالي قاعدة المتابعين الحالية لصناع المحتوى عبر مختلف المنصات وليس عدد مشاهدات مضمون.
             </p>
+          </div>
+        </div>
+
+        <!-- Verified Real Social Proof Gallery -->
+        <div class="social-proof-section" style="margin-top: 2rem;">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+            <div class="en-sub" style="color: var(--saden-blue-dark); font-size: 0.85rem; font-weight: 700;">
+              <i class="fa-solid fa-square-poll-vertical" style="color: var(--saden-orange); margin-left: 0.4rem;"></i>
+              إثباتات المشاهدات والتفاعل الحقيقي — REAL SOCIAL PROOF
+            </div>
+            <span style="font-size: 0.8rem; color: var(--text-dark-muted);">اضغط لتكبير الصورة</span>
+          </div>
+
+          <div class="social-proof-grid">
+            <div class="proof-card" data-gallery-src="assets/social/proof_1.jpeg" data-gallery-title="الزوزات — TikTok (3.7M متابع، 58.9M لايك، وفيديوهات 13M و 9.2M مشاهدة)">
+              <img src="assets/social/proof_1.jpeg" alt="TikTok Proof - 3.7M Followers, 13M Views">
+              <div class="proof-overlay">
+                <span class="proof-tag"><i class="fa-brands fa-tiktok"></i> TikTok</span>
+                <span class="proof-stat">13M & 9.2M Views</span>
+              </div>
+            </div>
+
+            <div class="proof-card" data-gallery-src="assets/social/proof_2.jpeg" data-gallery-title="الزوزات — Instagram الرسمي (1.4M متابع)">
+              <img src="assets/social/proof_2.jpeg" alt="Instagram Proof - 1.4M Followers">
+              <div class="proof-overlay">
+                <span class="proof-tag"><i class="fa-brands fa-instagram"></i> Instagram</span>
+                <span class="proof-stat">1.4M Followers</span>
+              </div>
+            </div>
+
+            <div class="proof-card" data-gallery-src="assets/social/proof_3.jpeg" data-gallery-title="الزوزات — Facebook الرسمي (4.6M متابع)">
+              <img src="assets/social/proof_3.jpeg" alt="Facebook Proof - 4.6M Followers">
+              <div class="proof-overlay">
+                <span class="proof-tag"><i class="fa-brands fa-facebook-f"></i> Facebook</span>
+                <span class="proof-stat">4.6M Followers</span>
+              </div>
+            </div>
+
+            <div class="proof-card" data-gallery-src="assets/social/proof_4.jpeg" data-gallery-title="محمد الهجان — Instagram الرسمي (698K متابع)">
+              <img src="assets/social/proof_4.jpeg" alt="Elhagan Instagram Proof - 698K Followers">
+              <div class="proof-overlay">
+                <span class="proof-tag"><i class="fa-brands fa-instagram"></i> Elhagan IG</span>
+                <span class="proof-stat">698K Followers</span>
+              </div>
+            </div>
+
+            <div class="proof-card" data-gallery-src="assets/social/proof_5.jpeg" data-gallery-title="محمد الهجان — Facebook الرسمي (1M متابع)">
+              <img src="assets/social/proof_5.jpeg" alt="Elhagan Facebook Proof - 1M Followers">
+              <div class="proof-overlay">
+                <span class="proof-tag"><i class="fa-brands fa-facebook-f"></i> Elhagan FB</span>
+                <span class="proof-stat">1M Followers</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1441,29 +1519,11 @@
             <strong style="color: var(--saden-orange);">ورحلة مختلفة تمامًا.</strong>
           </p>
 
-          <!-- OUTRO VIDEO PLACEHOLDER — Logo above, video below -->
-          <div class="outro-video-block">
-            <div class="outro-video-label">
-              <i class="fa-solid fa-film"></i>
-              OUTRO — K3AB DAYR × SIDN
-            </div>
-            <div class="outro-video-frame">
-              <img src="assets/k3abdayr/logo_1.jpeg" alt="كعب داير أوترو" class="outro-bg-logo">
-              <div class="outro-play-area">
-                <div class="outro-play-icon">
-                  <i class="fa-solid fa-circle-play"></i>
-                </div>
-                <span>Outro Video</span>
-                <span style="font-size: 0.8rem; opacity: 0.6;">سيتم إضافة رابط الأوترو هنا</span>
-              </div>
-            </div>
-          </div>
-
-          <div style="background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.15); padding: 1.5rem 2.5rem; border-radius: 12px; display: inline-block; margin-top: 2rem;">
-            <div style="font-family: var(--font-en-display); font-size: 1.5rem; font-weight: 800; letter-spacing: 0.12em;">
+          <div style="background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.15); padding: 1.75rem 3rem; border-radius: 14px; display: inline-block; margin-top: 2rem; backdrop-filter: blur(10px);">
+            <div style="font-family: var(--font-en-display); font-size: 1.8rem; font-weight: 800; letter-spacing: 0.12em; color: #fff;">
               K3AB DAYR <span style="color: var(--saden-orange);">×</span> SIDN
             </div>
-            <div style="font-size: 0.95rem; color: var(--light-sand); margin-top: 0.35rem; font-weight: 500;">
+            <div style="font-size: 1.05rem; color: var(--light-sand); margin-top: 0.5rem; font-weight: 500;">
               A New Journey. A Different Surprise.
             </div>
           </div>
